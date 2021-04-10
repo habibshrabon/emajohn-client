@@ -9,10 +9,10 @@ import SplitForm from './SplitForm';
 const stripePromise = loadStripe('pk_test_51IeOHdEPKgUGCeOdDicojypIybWT4gSZx9XD79DnLR0y6O2kjWjXBME4YxXGrV81zPTcdM5zHoF57Dq86vy4KYwC00RaTNATG3');
 
 
-const ProcessPayment = () => {
+const ProcessPayment = ({handelPayment}) => {
     return (
         <Elements stripe={stripePromise}>
-            <SimpleCardForm></SimpleCardForm>
+            <SimpleCardForm handelPayment={handelPayment}></SimpleCardForm>
         </Elements>
     );
 };
